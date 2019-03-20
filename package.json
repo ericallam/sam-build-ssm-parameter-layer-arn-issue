@@ -1,0 +1,19 @@
+{
+  "name": "sam-build-ssm-parameter-layer-arn-issue",
+  "version": "1.0.0",
+  "description": "An example application that demonstrates the issue of sam build when a layer arn is provided by a SSM param",
+  "author": "Eric Allam @ericallam",
+  "license": "MIT",
+  "bugs": "https://github.com/ericallam/sam-build-ssm-parameter-layer-arn-issue/issues",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "2.x"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/ericallam/sam-build-ssm-parameter-layer-arn-issue",
+  "repository": "https://github.com/ericallam/sam-build-ssm-parameter-layer-arn-issue"
+}

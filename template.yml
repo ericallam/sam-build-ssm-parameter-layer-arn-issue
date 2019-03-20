@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: sam-build-ssm-parameter-layer-arn-issue
+
+Parameters:
+  CustomSDKsLayerVersionArn:
+    Type: "AWS::SSM::Parameter::Value<String>"
+    Default: "CustomSDKs/ARN"
+    Description: "The Layer Version ARN of the Custom SDKs Layer which packages aws-sdk and aws-xray-sdk"
+
+Resources:
+  FooFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: nodejs8.10
+      Handler: index.handler
+      CodeUri: .
+      Layers:
+        - !Ref CustomSDKsLayerVersionArn
